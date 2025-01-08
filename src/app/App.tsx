@@ -8,6 +8,7 @@ import { Suspense } from 'react';
 
 export default function App() {
     const { theme } = useTheme();
+
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
