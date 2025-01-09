@@ -1,8 +1,9 @@
+
 @use "./reset";
+@use "./variables/global";
 @use "./themes/dark";
 @use "./themes/normal";
-@use "./variables/global";
-
+ 
 .app {
   font: var(--font-m);
   background: var(--bg-color);

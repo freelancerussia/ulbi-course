@@ -6,6 +6,8 @@ import { buildResolvers } from './buildResolvers';
 import { buildPlugins } from './buildPlugins';
 import { buildDevServer } from './buildDevServer';
 
+
+//исправляет ошибки storybook абсолютных путей и css модулей
 export function buildWebpackConfig(
     options: BuildOptions
 ): webpack.Configuration {
