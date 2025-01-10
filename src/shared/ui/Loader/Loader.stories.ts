@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Loader } from './Loader';
+import { Theme } from 'app/providers/ThemeProvider';
 
 const meta = {
     title: 'shared/Loader',
@@ -22,8 +23,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
+    parameters: {
+        theme: Theme.LIGHT,
+    },
     args: {
 
     },
 };
 
+export const PrimaryDark: Story = {
+    parameters: {
+        theme: Theme.DARK,
+    },
+    args: {
+
+    },
+};

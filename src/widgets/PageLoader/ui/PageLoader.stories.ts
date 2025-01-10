@@ -1,10 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { NotFoundPage } from './NotFoundPage';
+import { PageLoader } from './PageLoader';
+import { Theme } from 'app/providers/ThemeProvider';
 
 const meta = {
-    title: 'pages/NotFoundPage',
-    component: NotFoundPage,
+    title: 'widgets/PageLoader',
+    component: PageLoader,
     // parameters: {
 
     //     layout: 'centered',
@@ -16,14 +17,25 @@ const meta = {
     args: {
 
     }
-} satisfies Meta<typeof NotFoundPage>;
+} satisfies Meta<typeof PageLoader>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
+    parameters: {
+        theme: Theme.LIGHT,
+    },
     args: {
 
     },
 };
 
+export const PrimaryDark: Story = {
+    parameters: {
+        theme: Theme.DARK,
+    },
+    args: {
+
+    },
+};

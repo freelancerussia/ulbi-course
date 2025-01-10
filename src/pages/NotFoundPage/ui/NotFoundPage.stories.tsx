@@ -1,11 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import AboutPage from './AboutPage';
+import { NotFoundPage } from './NotFoundPage';
 import { Theme } from 'app/providers/ThemeProvider';
+// import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+// import { Theme } from 'app/providers/ThemeProvider';
 
 const meta = {
-    title: 'pages/AboutPage',
-    component: AboutPage,
+    title: 'pages/NotFoundPage',
+    component: NotFoundPage,
     // parameters: {
 
     //     layout: 'centered',
@@ -13,25 +15,16 @@ const meta = {
     // tags: ['autodocs'],
     argTypes: {
         // backgroundColor: { control: 'color' },
+
     },
     args: {
 
-    }
-} satisfies Meta<typeof AboutPage>;
+    },
+
+} satisfies Meta<typeof NotFoundPage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
-
-// const themes = Object.values(Theme);
-
-// themes.forEach((theme) => {
-//     exports[theme.toUpperCase()] = {
-//         parametrs:{
-//             theme
-//         }
-//     };
-// });
 
 export const Primary: Story = {
     parameters: {

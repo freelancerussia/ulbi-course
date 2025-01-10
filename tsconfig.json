@@ -15,7 +15,7 @@
     "esModuleInterop": true
   },
   "ts-node": {
-    "compilerOptions": {
+    "compilerOptions": { 
       "module": "CommonJS"
     }
   },
