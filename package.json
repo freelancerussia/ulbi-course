@@ -10,7 +10,7 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki --chromeConcurrency 1 test",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci":"npx loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:ci":"npx loki --chromeConcurrency 1 --requireReference --reactUri file:./storybook-static",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
