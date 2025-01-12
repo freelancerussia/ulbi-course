@@ -15,7 +15,7 @@
     "lint:fix": "eslint --fix",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "lint:scss": "npx stylelint \"**/*.scss\" ",
-    "storybook": "storybook dev -p 6006 -c ./config/storybook",
+    "storybook": "storybook dev -p 22452 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook"
   },
   "keywords": [],
