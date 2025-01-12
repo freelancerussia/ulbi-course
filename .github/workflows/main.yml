@@ -42,12 +42,12 @@ jobs:
       - name: Start Storybook server
         run: npm run storybook &
         env:
-          PORT: 22452 # Убедитесь, что порт совпадает с тем, который используется в локальной среде
+          PORT: 6006 # Убедитесь, что порт совпадает с тем, который используется в локальной среде
 
       - name: Wait for Storybook to start
         run: |
           for i in {1..15}; do
-            if curl -s http://localhost:22452 > /dev/null; then
+            if curl -s http://localhost:6006 > /dev/null; then
               break
             fi
             echo "Waiting for Storybook to start..."
@@ -55,4 +55,4 @@ jobs:
           done
 
       - name: Test screenshot
-        run: npm run test:ui:ci -- --requireReference --reactUri http://10.1.0.62:22452
+        run: npm run test:ui:ci -- --requireReference --reactUri http://localhost:6006
