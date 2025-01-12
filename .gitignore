@@ -4,3 +4,4 @@
 .cache/
 yourProjectName.inlang/
 *storybook.log
+/storybook-static
