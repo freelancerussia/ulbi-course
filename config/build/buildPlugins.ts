@@ -8,7 +8,8 @@ export function buildPlugins({
     paths,
     isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
-    return [
+
+    const plugins = [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({
             template: paths.html,
@@ -20,9 +21,17 @@ export function buildPlugins({
         new webpack.DefinePlugin({
             __IS_DEV_: JSON.stringify(isDev),
         }),
-        new webpack.HotModuleReplacementPlugin(),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false
-        })
+
     ];
+
+    if (isDev) {
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: false
+        }));
+    }
+
+
+
+    return plugins;
 }
