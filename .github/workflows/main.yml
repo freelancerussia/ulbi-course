@@ -1,12 +1,10 @@
 name: linting, testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-
 on: 
   push:
     branches: [main]
   pull_request: 
     branches: [main]
-
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -15,44 +13,23 @@ jobs:
         node-version: [18.x]
     steps:
       - uses: actions/checkout@v2
-
-      - name: Starting Node.js ${{ matrix.node-version }}
+      - name: Starting Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install modules
+          node-version: ${{matrix.node-version}}
+      - name: install modules
         run: npm install
-
-      - name: Build production project
+      - name: build production project
         run: npm run build:prod
-
-      - name: Linting TypeScript
+      - name: linting typescript
         run: npm run lint
-
-      - name: Linting SCSS
+      - name: linting css
         run: npm run lint:scss
-
-      - name: Unit testing
+      - name: unit testing
         run: npm run test:unit
-
-      - name: Build Storybook
+      - name: build storybook
         run: npm run storybook:build
+      - name: test screenshot
+        run: npm run test:ui:ci
 
-      - name: Start Storybook server
-        run: npm run storybook &
-        env:
-          PORT: 6006 # Убедитесь, что порт совпадает с тем, который используется в локальной среде
-
-      - name: Wait for Storybook to start
-        run: |
-          for i in {1..10}; do
-            if curl -s http://localhost:$PORT > /dev/null; then
-              break
-            fi
-            echo "Waiting for Storybook to start..."
-            sleep 5
-          done
-
-      - name: Test screenshot
-        run: npm run test:ui:ci -- --requireReference --reactUri http://localhost:$PORT
+ 

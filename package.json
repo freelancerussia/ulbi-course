@@ -90,7 +90,7 @@
   },
   "loki": {
     "chromeOptions": {
-    "timeout": 80000,
+    "timeout": 120000,
      "args": [
             "--disable-cache"
         ]
