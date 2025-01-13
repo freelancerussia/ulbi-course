@@ -29,7 +29,17 @@ jobs:
         run: npm run test:unit
       - name: build storybook
         run: npm run storybook:build
-      - name: approve img
-        run: npm run test:ui:ok
+      - name: Check if Storybook static folder exists
+        run: |
+          if [ ! -d "./storybook-static" ]; then
+            echo "Error: Storybook static folder not found!"
+            exit 1
+          fi
+      - name: Check if Storybook static folder contains files
+        run: |
+          if [ -z "$(ls -A ./storybook-static)" ]; then
+            echo "Error: Storybook static folder is empty!"
+            exit 1
+          fi
       - name: test screenshot
         run: npm run test:ui:ci
