@@ -10,7 +10,7 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki --chromeConcurrency 1 test",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci":"npx loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
@@ -90,11 +90,11 @@
   },
   "loki": {
     "chromeOptions": {
-    "timeout": 120000,
-     "args": [
-            "--disable-cache"
-        ]
-  },
+      "timeout": 120000,
+      "args": [
+        "--disable-cache"
+      ]
+    },
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",
@@ -108,6 +108,6 @@
         "preset": "iPhone 7"
       }
     },
-    "timeout":80000
+    "timeout": 80000
   }
 }

@@ -13,7 +13,7 @@ export default [
         },
     },
     {
-        ignores: ['node_modules', 'build'],
+        ignores: ['node_modules', 'build', 'storybook-static', '.cache'],
     },
     {
         languageOptions: {

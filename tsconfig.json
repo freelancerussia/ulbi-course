@@ -12,7 +12,8 @@
       "*": ["./src/*"]
     },
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck":true
   },
   "ts-node": {
     "compilerOptions": { 
