@@ -16,6 +16,7 @@ export function buildWebpackConfig(
     return {
         mode,
         entry: paths.entry,
+        cache: false,
         module: {
             rules: buildLoaders(options),
         },

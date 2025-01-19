@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonSize, ButtonTheme } from './Button';
 import { Theme } from 'app/providers/ThemeProvider';
 
 const meta = {
@@ -24,7 +24,7 @@ export const Primary: Story = {
         theme: Theme.LIGHT,
     },
     args: {
-        children:'Text'
+        children: 'Text'
     },
 };
 export const Clear: Story = {
@@ -32,13 +32,13 @@ export const Clear: Story = {
         theme: Theme.LIGHT,
     },
     args: {
-        children:'Text',
-        theme: ThemeButton.CLEAR
+        children: 'Text',
+        theme: ButtonTheme.CLEAR
     },
     argTypes: {
         theme: {
             control: { type: 'select' },
-            options: Object.values(ThemeButton),
+            options: Object.values(ButtonTheme),
         },
     },
 };
@@ -48,8 +48,64 @@ export const Outline: Story = {
         theme: Theme.LIGHT,
     },
     args: {
-        children:'Text',
-        theme: ThemeButton.OUTLINE
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE
+    },
+};
+
+export const OutlineSizeM: Story = {
+    parameters: {
+        theme: Theme.LIGHT,
+    },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.M
+
+    },
+};
+
+export const OutlineSizeL: Story = {
+    parameters: {
+        theme: Theme.LIGHT,
+    },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.L
+
+    },
+};
+
+export const OutlineSizeXL: Story = {
+    parameters: {
+        theme: Theme.LIGHT,
+    },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.XL
+
+    },
+};
+
+export const BackgroundLight: Story = {
+    parameters: {
+        theme: Theme.LIGHT,
+    },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.BACKGROUND
+    },
+};
+
+export const BackgroundInvertedLight: Story = {
+    parameters: {
+        theme: Theme.LIGHT,
+    },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.BACKGROUND_INVERTED
     },
 };
 
@@ -58,7 +114,7 @@ export const PrimaryDark: Story = {
         theme: Theme.DARK,
     },
     args: {
-        children:'Text'
+        children: 'Text'
     },
 };
 export const ClearDark: Story = {
@@ -66,13 +122,13 @@ export const ClearDark: Story = {
         theme: Theme.DARK,
     },
     args: {
-        children:'Text',
-        theme: ThemeButton.CLEAR
+        children: 'Text',
+        theme: ButtonTheme.CLEAR
     },
     argTypes: {
         theme: {
             control: { type: 'select' },
-            options: Object.values(ThemeButton),
+            options: Object.values(ButtonTheme),
         },
     },
 };
@@ -82,7 +138,66 @@ export const OutlineDark: Story = {
         theme: Theme.DARK,
     },
     args: {
-        children:'Text',
-        theme: ThemeButton.OUTLINE
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE
+    },
+};
+
+
+export const BackgroundDark: Story = {
+    parameters: {
+        theme: Theme.DARK,
+    },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.BACKGROUND
+    },
+};
+
+export const BackgroundInvertedDark: Story = {
+    parameters: {
+        theme: Theme.DARK,
+    },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.BACKGROUND_INVERTED
+    },
+};
+
+export const SquareSizeM: Story = {
+    parameters: {
+        theme: Theme.DARK,
+    },
+    args: {
+        children: '>',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.M,
+        square: true
+
+    },
+};
+
+export const SquareSizeL: Story = {
+    parameters: {
+        theme: Theme.DARK,
+    },
+    args: {
+        children: '>',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.L,
+        square: true
+
+    },
+};
+
+export const SquareSizeXL: Story = {
+    parameters: {
+        theme: Theme.DARK,
+    },
+    args: {
+        children: '>',
+        theme: ButtonTheme.OUTLINE,
+        size: ButtonSize.XL,
+        square: true
     },
 };
