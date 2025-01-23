@@ -24,8 +24,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 export const Button: FC<ButtonProps> = (props) => {
     const { className, children, theme, square, size = ButtonSize.M, ...otherProps } = props;
-    console.log(s[size]);
-
 
     const mods: Record<string, boolean> = {
         [s.square]: square

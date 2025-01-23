@@ -12,10 +12,10 @@ describe('Button', () => {
     });
     test('with size prop', () => {
         render(<Button size={ButtonSize.M}>TEST</Button>);
-        expect(screen.getByText('TEST')).toHaveClass('size_m');
+        expect(screen.getByText('TEST')).toHaveClass('sizeM');
     });
     test('with size square prop', () => {
         render(<Button square={true} theme={ButtonTheme.BACKGROUND} size={ButtonSize.M}>TEST</Button>);
-        expect(screen.getByText('TEST')).toHaveClass('square background size_m');
+        expect(screen.getByText('TEST')).toHaveClass('square background sizeM');
     });
 });

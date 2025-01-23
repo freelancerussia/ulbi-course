@@ -5,3 +5,4 @@
 yourProjectName.inlang/
 *storybook.log
 /storybook-static
+.DS_Store
