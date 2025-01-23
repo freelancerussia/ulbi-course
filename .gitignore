@@ -6,3 +6,5 @@ yourProjectName.inlang/
 *storybook.log
 /storybook-static
 .DS_Store
+.loki/report.html
+.loki/report.json
