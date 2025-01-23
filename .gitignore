@@ -8,3 +8,4 @@ yourProjectName.inlang/
 .DS_Store
 .loki/report.html
 .loki/report.json
+scripts/generate-visual-json-report.js
