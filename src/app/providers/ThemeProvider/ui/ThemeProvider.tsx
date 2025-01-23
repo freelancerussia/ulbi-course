@@ -10,10 +10,11 @@ const defaultTheme =
 
 type ThemeProviderPropsType = {
   children: ReactNode;
+  initialTheme?: Theme
 };
 
-export const ThemeProvider: FC<ThemeProviderPropsType> = ({ children }) => {
-    const [theme, setTheme] = useState<Theme>(defaultTheme);
+export const ThemeProvider: FC<ThemeProviderPropsType> = ({ children, initialTheme }) => {
+    const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
 
     const defaultProps = useMemo(() => ({ theme, setTheme }), [theme]);
 

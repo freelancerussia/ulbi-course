@@ -21,9 +21,9 @@ const preview: Preview = {
         },
     },
     decorators: [(Story, context) => (
-        <ThemeProvider>
+        <ThemeProvider initialTheme={context.parameters.theme}>
             <div className={`app ${context.parameters.theme}`}>
-                <Story/>
+                <Story />
             </div>
         </ThemeProvider>
     ), RouterDecorator],

@@ -3,6 +3,7 @@ import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import i18next from 'eslint-plugin-i18next';
+import reactHooks from 'eslint-plugin-react-hooks';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -10,10 +11,11 @@ export default [
     {
         plugins: {
             react: pluginReact,
+            'react-hooks': reactHooks
         },
     },
     {
-        ignores: ['node_modules', 'build', 'storybook-static', '.cache'],
+        ignores: ['node_modules', 'build', 'storybook-static', '.cache', 'scripts'],
     },
     {
         languageOptions: {
@@ -37,6 +39,8 @@ export default [
             quotes: ['error', 'single'],
             semi: ['error', 'always'],
             'i18next/no-literal-string': ['warn'],
+            'react-hooks/rules-of-hooks': 'error',
+            'react-hooks/exhaustive-deps': 'error'
         },
     },
     pluginJs.configs.recommended,

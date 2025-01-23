@@ -1,8 +1,10 @@
-.app.light {
-  --bg-color: rgb(200 200 208);
-  --inverted-bg-color: rgb(1 1 76);
-  --primary-color: rgb(16 108 214);
-  --secondary-color: rgb(3 80 152);
-  --inverted-primary-color: rgb(6 187 6);
-  --inverted-secondary-color: rgb(2 189 2);
+body {
+  .app.light {
+    --bg-color: rgb(200 200 208);
+    --inverted-bg-color: rgb(1 1 76);
+    --primary-color: rgb(16 108 214);
+    --secondary-color: rgb(3 80 152);
+    --inverted-primary-color: rgb(6 187 6);
+    --inverted-secondary-color: rgb(2 189 2);
+  }
 }

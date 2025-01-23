@@ -43,6 +43,22 @@ export const Clear: Story = {
     },
 };
 
+export const ClearInverted: Story = {
+    parameters: {
+        theme: Theme.LIGHT,
+    },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.CLEAR_INVERTED
+    },
+    argTypes: {
+        theme: {
+            control: { type: 'select' },
+            options: Object.values(ButtonTheme),
+        },
+    },
+};
+
 export const Outline: Story = {
     parameters: {
         theme: Theme.LIGHT,
@@ -124,6 +140,22 @@ export const ClearDark: Story = {
     args: {
         children: 'Text',
         theme: ButtonTheme.CLEAR
+    },
+    argTypes: {
+        theme: {
+            control: { type: 'select' },
+            options: Object.values(ButtonTheme),
+        },
+    },
+};
+
+export const ClearDarkInverted: Story = {
+    parameters: {
+        theme: Theme.DARK,
+    },
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.CLEAR_INVERTED
     },
     argTypes: {
         theme: {
